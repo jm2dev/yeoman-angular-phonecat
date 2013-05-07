@@ -6,4 +6,18 @@
   </ul>
   <p>installed.</p>
   <h3>Enjoy coding! - Yeoman</h3>
+
+ <div class="span2">
+   <!--Sidebar content-->
+ 
+   Search: <input ng-model="query">
+ 
+ </div>  
+
+  <ul class="phones">
+    <li ng-repeat="phone in phones | filter:query">
+      {{phone.name}}
+      <p>{{phone.snippet}}</p>
+    </li>
+  </ul>
 </div>

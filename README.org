@@ -12,6 +12,7 @@ npm install -g yo
 npm install -g grunt-cli 
 npm install -g bower
 npm install -g generator-angular
+npm install -g karma
 #+END_SRC
 
 If you need to install compass:
@@ -33,6 +34,28 @@ And if you don't get any errors then preview it:
 
 #+BEGIN_SRC bash
 grunt server
+#+END_SRC
+
+* Testing
+
+** Unit testing
+
+#+BEGIN_SRC bash
+grunt karma:unit
+#+END_SRC
+
+** e2e testing
+
+Using tmux, in one tab run the server (localhost:9000):
+
+#+BEGIN_SRC bash
+grunt server
+#+END_SRC
+
+and in another tab run the karma e2e tests:
+
+#+BEGIN_SRC bash
+grunt karma:e2e
 #+END_SRC
 
 * References
